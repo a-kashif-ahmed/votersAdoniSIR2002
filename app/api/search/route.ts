@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSearchIndex } from '@/lib/searchIndex';
+import { incrementSearchCount } from '@/lib/stats';
 
 export async function GET(request: NextRequest) {
+    incrementSearchCount();
   const searchParams = request.nextUrl.searchParams;
 
   const name = (searchParams.get('name') || '').trim().toLowerCase();

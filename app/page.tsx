@@ -25,6 +25,17 @@ export default function Home() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const limit = 50;
+  const [searches, setSearches] = useState(0);
+
+useEffect(() => {
+  const load = async () => {
+    const res = await fetch("/api/stats");
+    const data = await res.json();
+    setSearches(data.searches);
+  };
+
+  load();
+}, [results]);
 
   useEffect(() => {
     const delayDebounce = setTimeout(() => {
@@ -115,6 +126,15 @@ export default function Home() {
 
           <span>Developer</span>
         </a>
+        <div className="flex gap-3">
+
+
+
+<span  className="absolute top-6 right-25 z-50 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-700 shadow-md transition-all hover:border-blue-300 hover:text-blue-600 hover:shadow-lg">
+Total Searches {searches} 
+</span>
+
+</div>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10">
@@ -167,7 +187,7 @@ export default function Home() {
               </div>
 
               {/* Result Count */}
-              <span className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium shadow-sm">
+              <span  className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-700 shadow-md transition-all hover:border-blue-300 hover:text-blue-600 hover:shadow-lg">
                 {total.toLocaleString()} Found
               </span>
 
