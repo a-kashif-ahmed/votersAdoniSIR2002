@@ -1,65 +1,263 @@
-import Image from "next/image";
+'use client';
+
+import { useState, useEffect } from 'react';
+
+interface Voter {
+  serial_no?: string;
+  house_no?: string;
+  name?: string;
+  relation?: string;
+  relation_name?: string;
+  gender?: string;
+  age?: string;
+  epic_no?: string;
+  page?: number;
+  constituency_number?: string;
+  part_number?: string;
+}
 
 export default function Home() {
+  const [nameQuery, setNameQuery] = useState('');
+  const [houseQuery, setHouseQuery] = useState('');
+  const [results, setResults] = useState<Voter[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [total, setTotal] = useState(0);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+  const limit = 50;
+
+  useEffect(() => {
+    const delayDebounce = setTimeout(() => {
+      if (nameQuery.trim() === "" && houseQuery.trim() === "") {
+        setResults([]);
+        setTotal(0);
+        setTotalPages(0);
+        setPage(1);
+        return;
+      }
+
+      setPage(1);
+      fetchResults(nameQuery, houseQuery, 1);
+    }, 300);
+
+    return () => clearTimeout(delayDebounce);
+  }, [nameQuery, houseQuery]);
+
+  useEffect(() => {
+    if (
+      nameQuery.trim() !== '' ||
+      houseQuery.trim() !== ''
+    ) {
+      fetchResults(nameQuery, houseQuery, page);
+    }
+  }, [page]);
+
+  const fetchResults = async (
+    name: string,
+    house: string,
+    pageNum: number
+  ) => {
+    setLoading(true);
+
+    try {
+      const res = await fetch(
+        `/api/search?name=${encodeURIComponent(name)}&house=${encodeURIComponent(
+          house
+        )}&page=${pageNum}&limit=${limit}`
+      );
+
+      const data = await res.json();
+
+      setResults(data.results || []);
+      setTotal(data.total || 0);
+      setTotalPages(data.totalPages || 0);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const goToPage = (newPage: number) => {
+    if (newPage >= 1 && newPage <= totalPages) {
+      setPage(newPage);
+    }
+  };
+
+  const isFemale = (gender?: string) => {
+    const g = (gender || "").trim().toLowerCase();
+
+    return (
+      g === "స్త్రీ" ||
+      g === "ఆడ" ||
+      g === "female" ||
+      g === "f" ||
+      g === "ీ"
+    );
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/50 p-6 md:p-10">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/50 p-6 md:p-10">
+        {/* Glass container */}
+        <a
+          href="https://www.linkedin.com/in/a-kashif-ahmed/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute top-6 right-6 z-50 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-700 shadow-md transition-all hover:border-blue-300 hover:text-blue-600 hover:shadow-lg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="currentColor"
+            viewBox="0 0 24 24"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <path d="M20.447 20.452H16.89v-5.569c0-1.328-.026-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.347V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.604 0 4.268 2.372 4.268 5.456v6.285zM5.337 7.433a2.063 2.063 0 110-4.126 2.063 2.063 0 010 4.126zM7.119 20.452H3.555V9h3.564v11.452z" />
+          </svg>
+
+          <span>Developer</span>
+        </a>
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-10">
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              2002 Adoni S.I.R Voter Search
+            </h1>
+            <p className="text-gray-500 mt-2 text-lg">
+              Search by voter ID (EPIC) or door number
+            </p>
+          </div>
+
+          {/* Search Bar - Glass effect */}
+          <div className="max-w-5xl mx-auto mb-10">
+
+            <div className="grid md:grid-cols-2 gap-4">
+
+              <input
+                type="text"
+                placeholder="Search EPIC"
+                value={nameQuery}
+                onChange={(e) => setNameQuery(e.target.value)}
+                className="rounded-xl border border-gray-300 px-4 py-3 shadow-sm focus:ring-2 focus:ring-blue-500 outline-none"
+              />
+
+              <input
+                type="text"
+                placeholder=" Search House No"
+                value={houseQuery}
+                onChange={(e) => setHouseQuery(e.target.value)}
+                className="rounded-xl border border-gray-300 px-4 py-3 shadow-sm focus:ring-2 focus:ring-blue-500 outline-none"
+              />
+
+            </div>
+
+            <div className="mt-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+              {/* Color Legend */}
+              <div className="flex flex-wrap items-center gap-4 text-sm">
+
+                <div className="flex items-center gap-2">
+                  <span className="w-4 h-4 rounded bg-white border border-gray-300"></span>
+                  <span className="text-gray-700">Male</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <span className="w-4 h-4 rounded bg-pink-100 border border-pink-300"></span>
+                  <span className="text-gray-700">Female</span>
+                </div>
+
+              </div>
+
+              {/* Result Count */}
+              <span className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium shadow-sm">
+                {total.toLocaleString()} Found
+              </span>
+
+            </div>
+
+          </div>
+
+          {/* Loading state */}
+          {loading && (
+            <div className="flex justify-center items-center py-8">
+              <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+              <span className="ml-3 text-blue-600 font-medium">Searching...</span>
+            </div>
+          )}
+
+          {/* Results Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {results.map((voter, idx) => {
+              const female = isFemale(voter.gender);
+
+              return (
+                <div
+                  key={idx}
+                  className={`
+    rounded-2xl
+    border
+    p-6
+    shadow-sm
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:shadow-lg
+
+    ${female ? "bg-pink-50 border-pink-200 hover:border-pink-300"
+                      : "bg-white border-gray-200 hover:border-blue-300"
+                    }
+  `}
+                >
+                  <div className="flex justify-between items-start mb-4">
+                    <span className="text-xl font-semibold text-gray-800 tracking-tight">
+                      {voter.name || ' '}
+                    </span>
+                    <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs px-3 py-1 rounded-full font-medium shadow-sm">
+                      {voter.epic_no || 'No EPIC'}
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3 text-sm text-gray-600 mb-4">
+                    <span className="flex items-center gap-1">🏠 {voter.house_no || 'N/A'}</span>
+                    <span className="flex items-center gap-1">👤 {voter.gender || 'N/A'}</span>
+                    <span className="flex items-center gap-1">🎂 {voter.age || 'N/A'}</span>
+                  </div>
+                  <div className="border-t border-gray-200/50 pt-3 text-xs text-gray-400 flex flex-col gap-1">
+                    <span>Constituency: {voter.constituency_number || 'N/A'}</span>
+                    <span>Part: {voter.part_number || 'N/A'}</span>
+                    <span>Page: {voter.page || 'N/A'}</span>
+                  </div>
+                </div>
+              );
+            })}
+            {!loading && houseQuery && nameQuery && results.length === 0 && (
+              <div className="col-span-full text-center py-16">
+                <p className="text-gray-400 text-lg">No voters found. Try a different search.</p>
+              </div>
+            )}
+          </div>
+
+          {/* Pagination - Glass */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-6 mt-12 py-4 px-6 bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-white/30 max-w-md mx-auto">
+              <button
+                onClick={() => goToPage(page - 1)}
+                disabled={page <= 1}
+                className="px-5 py-2 rounded-xl bg-white/80 backdrop-blur-sm border border-gray-200/50 text-gray-700 font-medium shadow-sm hover:shadow-md transition disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                ← Previous
+              </button>
+              <span className="text-gray-600 font-medium">
+                {page} / {totalPages}
+              </span>
+              <button
+                onClick={() => goToPage(page + 1)}
+                disabled={page >= totalPages}
+                className="px-5 py-2 rounded-xl bg-white/80 backdrop-blur-sm border border-gray-200/50 text-gray-700 font-medium shadow-sm hover:shadow-md transition disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                Next →
+              </button>
+            </div>
+          )}
         </div>
-      </main>
+      </div>
     </div>
   );
 }
