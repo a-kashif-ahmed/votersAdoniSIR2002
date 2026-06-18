@@ -138,7 +138,7 @@ Total Searches {searches}
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10">
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
               2002 Adoni S.I.R Voter Search
             </h1>
             <p className="text-gray-500 mt-2 text-lg">
@@ -230,14 +230,14 @@ Total Searches {searches}
                     <span className="text-xl font-semibold text-gray-800 tracking-tight">
                       {voter.name || ' '}
                     </span>
-                    <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs px-3 py-1 rounded-full font-medium shadow-sm">
+                    <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white text-xs px-3 py-1 rounded-full font-medium shadow-sm">
                       {voter.epic_no || 'No EPIC'}
                     </span>
                   </div>
                   <div className="grid grid-cols-3 gap-3 text-sm text-gray-600 mb-4">
-                    <span className="flex items-center gap-1">🏠 {voter.house_no || 'N/A'}</span>
-                    <span className="flex items-center gap-1">👤 {voter.gender || 'N/A'}</span>
-                    <span className="flex items-center gap-1">🎂 {voter.age || 'N/A'}</span>
+                    <span className="flex items-center gap-1">H.No: {voter.house_no || 'N/A'}</span>
+                    
+                    <span className="flex items-center gap-1">Age :{voter.age || 'N/A'}</span>
                   </div>
                   <div className="border-t border-gray-200/50 pt-3 text-xs text-gray-400 flex flex-col gap-1">
                     <span>Constituency: {voter.constituency_number || 'N/A'}</span>
