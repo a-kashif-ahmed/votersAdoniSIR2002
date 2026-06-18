@@ -113,7 +113,7 @@ useEffect(() => {
           href="https://www.linkedin.com/in/a-kashif-ahmed/"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute top-6 right-6 z-50 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-700 shadow-md transition-all hover:border-blue-300 hover:text-blue-600 hover:shadow-lg"
+          className="absolute top-4 right-6 z-50 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-700 shadow-md transition-all hover:border-blue-300 hover:text-blue-600 hover:shadow-lg"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@ useEffect(() => {
 
 
 
-<span  className="absolute top-6 right-25 z-50 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-700 shadow-md transition-all hover:border-blue-300 hover:text-blue-600 hover:shadow-lg">
+<span  className="absolute top-4 left-6 z-50 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-700 shadow-md transition-all hover:border-blue-300 hover:text-blue-600 hover:shadow-lg">
 Total Searches {searches} 
 </span>
 
