@@ -17,7 +17,7 @@ interface Voter {
 }
 
 export default function Home() {
-  const [nameQuery, setNameQuery] = useState('');
+  const [epicQuery, setEpicQuery] = useState('');
   const [houseQuery, setHouseQuery] = useState('');
   const [results, setResults] = useState<Voter[]>([]);
   const [loading, setLoading] = useState(false);
@@ -35,11 +35,15 @@ useEffect(() => {
   };
 
   load();
-}, [results]);
+
+  const interval = setInterval(load, 5000);
+
+  return () => clearInterval(interval);
+}, []);
 
   useEffect(() => {
-    const delayDebounce = setTimeout(() => {
-      if (nameQuery.trim() === "" && houseQuery.trim() === "") {
+    const timer = setTimeout(() => {
+      if (epicQuery.trim() === '' && houseQuery.trim() === '') {
         setResults([]);
         setTotal(0);
         setTotalPages(0);
@@ -48,23 +52,20 @@ useEffect(() => {
       }
 
       setPage(1);
-      fetchResults(nameQuery, houseQuery, 1);
+      fetchResults(epicQuery, houseQuery, 1);
     }, 300);
 
-    return () => clearTimeout(delayDebounce);
-  }, [nameQuery, houseQuery]);
+    return () => clearTimeout(timer);
+  }, [epicQuery, houseQuery]);
 
   useEffect(() => {
-    if (
-      nameQuery.trim() !== '' ||
-      houseQuery.trim() !== ''
-    ) {
-      fetchResults(nameQuery, houseQuery, page);
+    if (epicQuery.trim() !== '' || houseQuery.trim() !== '') {
+      fetchResults(epicQuery, houseQuery, page);
     }
   }, [page]);
 
   const fetchResults = async (
-    name: string,
+    epic: string,
     house: string,
     pageNum: number
   ) => {
@@ -72,10 +73,10 @@ useEffect(() => {
 
     try {
       const res = await fetch(
-        `/api/search?name=${encodeURIComponent(name)}&house=${encodeURIComponent(
-          house
-        )}&page=${pageNum}&limit=${limit}`
+        `/api/search?epic=${encodeURIComponent(epic)}&house=${encodeURIComponent(house)}&page=${pageNum}&limit=${limit}`
       );
+
+      if (!res.ok) throw new Error("Search failed");
 
       const data = await res.json();
 
@@ -107,7 +108,7 @@ useEffect(() => {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/50 p-6 md:p-10">
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/50 p-6 md:p-10">
+      
         {/* Glass container */}
         <a
           href="https://www.linkedin.com/in/a-kashif-ahmed/"
@@ -130,11 +131,11 @@ useEffect(() => {
 
 
 
-<span  className="absolute top-4 left-6 z-50 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-700 shadow-md transition-all hover:border-blue-300 hover:text-blue-600 hover:shadow-lg">
-Total Searches {searches} 
-</span>
+          <span className="absolute top-4 left-6 z-50 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-700 shadow-md transition-all hover:border-blue-300 hover:text-blue-600 hover:shadow-lg">
+            Total Searches {searches}
+          </span>
 
-</div>
+        </div>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10">
@@ -154,9 +155,9 @@ Total Searches {searches}
               <input
                 type="text"
                 placeholder="Search EPIC"
-                value={nameQuery}
-                onChange={(e) => setNameQuery(e.target.value)}
-                className="rounded-xl border border-gray-300 px-4 py-3 shadow-sm focus:ring-2 focus:ring-blue-500 outline-none"
+                value={epicQuery}
+                onChange={(e) => setEpicQuery(e.target.value)}
+                className="rounded-xl border border-gray-300 px-4 py-3 shadow-sm focus:ring-2 focus:ring-cyan-500 outline-none"
               />
 
               <input
@@ -187,7 +188,7 @@ Total Searches {searches}
               </div>
 
               {/* Result Count */}
-              <span  className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-700 shadow-md transition-all hover:border-blue-300 hover:text-blue-600 hover:shadow-lg">
+              <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-700 shadow-md transition-all hover:border-blue-300 hover:text-blue-600 hover:shadow-lg">
                 {total.toLocaleString()} Found
               </span>
 
@@ -236,18 +237,21 @@ Total Searches {searches}
                   </div>
                   <div className="grid grid-cols-3 gap-3 text-sm text-gray-600 mb-4">
                     <span className="flex items-center gap-1">H.No: {voter.house_no || 'N/A'}</span>
-                    
+
                     <span className="flex items-center gap-1">Age :{voter.age || 'N/A'}</span>
                   </div>
                   <div className="border-t border-gray-200/50 pt-3 text-xs text-gray-400 flex flex-col gap-1">
                     <span>Constituency: {voter.constituency_number || 'N/A'}</span>
                     <span>Part: {voter.part_number || 'N/A'}</span>
+                    <span>Serial No. {voter.serial_no || 'N/A'}</span>
                     <span>Page: {voter.page || 'N/A'}</span>
                   </div>
                 </div>
               );
             })}
-            {!loading && houseQuery && nameQuery && results.length === 0 && (
+            {!loading &&
+(epicQuery || houseQuery) &&
+results.length === 0 && (
               <div className="col-span-full text-center py-16">
                 <p className="text-gray-400 text-lg">No voters found. Try a different search.</p>
               </div>
@@ -278,6 +282,6 @@ Total Searches {searches}
           )}
         </div>
       </div>
-    </div>
+    
   );
 }

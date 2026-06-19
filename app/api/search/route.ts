@@ -6,13 +6,13 @@ export async function GET(request: NextRequest) {
     incrementSearchCount();
   const searchParams = request.nextUrl.searchParams;
 
-  const name = (searchParams.get('name') || '').trim().toLowerCase();
-  const house = (searchParams.get('house') || '').trim().toLowerCase();
+  const epic = (searchParams.get("epic") || "").trim().toLowerCase();
+const house = (searchParams.get("house") || "").trim().toLowerCase();
 
   const page = parseInt(searchParams.get('page') || '1', 10);
   const limit = parseInt(searchParams.get('limit') || '50', 10);
 
-  if (name === '' && house === '') {
+  if (epic === '' && house === '') {
     return NextResponse.json({
       results: [],
       total: 0,
@@ -24,23 +24,20 @@ export async function GET(request: NextRequest) {
 
   const { voters } = getSearchIndex();
 
-  const matches = voters.filter((voter) => {
-    const voterName = (voter.name || '').toLowerCase();
-    const epic = (voter.epic_no || '').toLowerCase();
-    const voterHouse = (voter.house_no || '').toLowerCase();
+const matches = voters.filter((voter) => {
+  const voterEpic = (voter.epic_no || "").toLowerCase();
+  const voterHouse = (voter.house_no || "").toLowerCase();
 
-    const nameMatch =
-      name === '' ||
-      voterName.includes(name) ||
-      epic.includes(name);
+  const epicMatch =
+    epic === "" ||
+    voterEpic.includes(epic);
 
-    const houseMatch =
-      house === '' ||
-      voterHouse.includes(house);
+  const houseMatch =
+    house === "" ||
+    voterHouse.includes(house);
 
-    return nameMatch && houseMatch;
-  });
-
+  return epicMatch && houseMatch;
+});
   const start = (page - 1) * limit;
   const end = start + limit;
 
