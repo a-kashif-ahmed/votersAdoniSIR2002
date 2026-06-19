@@ -108,8 +108,7 @@ useEffect(() => {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/50 p-6 md:p-10">
-      
-        {/* Glass container */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/50 p-6 md:p-10">
         <a
           href="https://www.linkedin.com/in/a-kashif-ahmed/"
           target="_blank"
@@ -282,6 +281,6 @@ results.length === 0 && (
           )}
         </div>
       </div>
-    
+    </div>
   );
 }
