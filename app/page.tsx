@@ -12,8 +12,8 @@ interface Voter {
   age?: string;
   epic_no?: string;
   page?: number;
-  constituency_number?: string;
-  part_number?: string;
+  constituency_no?: string;
+  part_no?: string;
 }
 
 export default function Home() {
