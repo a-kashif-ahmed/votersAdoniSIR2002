@@ -1,242 +1,687 @@
-[
-  {
-    "file": "S01_176_161.pdf",
-    "status": "success",
-    "voters": 616
-  },
-  {
-    "file": "S01_176_162.pdf",
-    "status": "success",
-    "voters": 845
-  },
-  {
-    "file": "S01_176_163.pdf",
-    "status": "success",
-    "voters": 887
-  },
-  {
-    "file": "S01_176_164.pdf",
-    "status": "success",
-    "voters": 904
-  },
-  {
-    "file": "S01_176_165.pdf",
-    "status": "success",
-    "voters": 919
-  },
-  {
-    "file": "S01_176_166.pdf",
-    "status": "success",
-    "voters": 939
-  },
-  {
-    "file": "S01_176_167.pdf",
-    "status": "success",
-    "voters": 1014
-  },
-  {
-    "file": "S01_176_168.pdf",
-    "status": "success",
-    "voters": 909
-  },
-  {
-    "file": "S01_176_169.pdf",
-    "status": "success",
-    "voters": 859
-  },
-  {
-    "file": "S01_176_170.pdf",
-    "status": "success",
-    "voters": 1110
-  },
-  {
-    "file": "S01_176_171.pdf",
-    "status": "success",
-    "voters": 984
-  },
-  {
-    "file": "S01_176_172.pdf",
-    "status": "success",
-    "voters": 635
-  },
-  {
-    "file": "S01_176_173.pdf",
-    "status": "success",
-    "voters": 579
-  },
-  {
-    "file": "S01_176_174.pdf",
-    "status": "success",
-    "voters": 597
-  },
-  {
-    "file": "S01_176_175.pdf",
-    "status": "success",
-    "voters": 627
-  },
-  {
-    "file": "S01_176_176.pdf",
-    "status": "success",
-    "voters": 726
-  },
-  {
-    "file": "S01_176_177.pdf",
-    "status": "success",
-    "voters": 713
-  },
-  {
-    "file": "S01_176_178.pdf",
-    "status": "success",
-    "voters": 850
-  },
-  {
-    "file": "S01_176_179.pdf",
-    "status": "success",
-    "voters": 828
-  },
-  {
-    "file": "S01_176_180.pdf",
-    "status": "success",
-    "voters": 797
-  },
-  {
-    "file": "S01_176_181.pdf",
-    "status": "success",
-    "voters": 871
-  },
-  {
-    "file": "S01_176_182.pdf",
-    "status": "success",
-    "voters": 1158
-  },
-  {
-    "file": "S01_176_183.pdf",
-    "status": "success",
-    "voters": 1124
-  },
-  {
-    "file": "S01_176_184.pdf",
-    "status": "success",
-    "voters": 1045
-  },
-  {
-    "file": "S01_176_185.pdf",
-    "status": "success",
-    "voters": 667
-  },
-  {
-    "file": "S01_176_186.pdf",
-    "status": "success",
-    "voters": 960
-  },
-  {
-    "file": "S01_176_187.pdf",
-    "status": "success",
-    "voters": 695
-  },
-  {
-    "file": "S01_176_188.pdf",
-    "status": "success",
-    "voters": 897
-  },
-  {
-    "file": "S01_176_189.pdf",
-    "status": "success",
-    "voters": 901
-  },
-  {
-    "file": "S01_176_190.pdf",
-    "status": "success",
-    "voters": 689
-  },
-  {
-    "file": "S01_176_191.pdf",
-    "status": "success",
-    "voters": 660
-  },
-  {
-    "file": "S01_176_192.pdf",
-    "status": "success",
-    "voters": 1435
-  },
-  {
-    "file": "S01_176_193.pdf",
-    "status": "success",
-    "voters": 603
-  },
-  {
-    "file": "S01_176_194.pdf",
-    "status": "success",
-    "voters": 1470
-  },
-  {
-    "file": "S01_176_195.pdf",
-    "status": "success",
-    "voters": 445
-  },
-  {
-    "file": "S01_176_196.pdf",
-    "status": "success",
-    "voters": 1008
-  },
-  {
-    "file": "S01_176_197.pdf",
-    "status": "success",
-    "voters": 904
-  },
-  {
-    "file": "S01_176_198.pdf",
-    "status": "success",
-    "voters": 804
-  },
-  {
-    "file": "S01_176_199.pdf",
-    "status": "success",
-    "voters": 938
-  },
-  {
-    "file": "S01_176_200.pdf",
-    "status": "success",
-    "voters": 613
-  },
-  {
-    "file": "S01_176_201.pdf",
-    "status": "success",
-    "voters": 980
-  },
-  {
-    "file": "S01_176_202.pdf",
-    "status": "success",
-    "voters": 659
-  },
-  {
-    "file": "S01_176_203.pdf",
-    "status": "success",
-    "voters": 1515
-  },
-  {
-    "file": "S01_176_204.pdf",
-    "status": "success",
-    "voters": 656
-  },
-  {
-    "file": "S01_176_205.pdf",
-    "status": "success",
-    "voters": 856
-  },
-  {
-    "file": "S01_176_206.pdf",
-    "status": "success",
-    "voters": 1042
-  },
-  {
-    "file": "S01_176_207.pdf",
-    "status": "success",
-    "voters": 548
-  },
-  {
-    "file": "S01_176_208.pdf",
-    "status": "success",
-    "voters": 587
-  }
-]
+{
+  "generated": "2026-06-28T12:15:59",
+  "total_files": 113,
+  "ok": 113,
+  "errors": 0,
+  "total_voters": 103049,
+  "files": [
+    {
+      "file": "S01_176_100.pdf",
+      "output": "json_2\\S01_176_100.json",
+      "voters": 980,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_101.pdf",
+      "output": "json_2\\S01_176_101.json",
+      "voters": 1065,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_102.pdf",
+      "output": "json_2\\S01_176_102.json",
+      "voters": 973,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_103.pdf",
+      "output": "json_2\\S01_176_103.json",
+      "voters": 1106,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_104.pdf",
+      "output": "json_2\\S01_176_104.json",
+      "voters": 918,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_105.pdf",
+      "output": "json_2\\S01_176_105.json",
+      "voters": 1134,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_106.pdf",
+      "output": "json_2\\S01_176_106.json",
+      "voters": 782,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_107.pdf",
+      "output": "json_2\\S01_176_107.json",
+      "voters": 816,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_108.pdf",
+      "output": "json_2\\S01_176_108.json",
+      "voters": 813,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_109.pdf",
+      "output": "json_2\\S01_176_109.json",
+      "voters": 729,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_110.pdf",
+      "output": "json_2\\S01_176_110.json",
+      "voters": 1227,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_111.pdf",
+      "output": "json_2\\S01_176_111.json",
+      "voters": 1109,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_112.pdf",
+      "output": "json_2\\S01_176_112.json",
+      "voters": 1945,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_113.pdf",
+      "output": "json_2\\S01_176_113.json",
+      "voters": 1377,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_114.pdf",
+      "output": "json_2\\S01_176_114.json",
+      "voters": 1885,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_115.pdf",
+      "output": "json_2\\S01_176_115.json",
+      "voters": 1008,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_116.pdf",
+      "output": "json_2\\S01_176_116.json",
+      "voters": 917,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_117.pdf",
+      "output": "json_2\\S01_176_117.json",
+      "voters": 1016,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_118.pdf",
+      "output": "json_2\\S01_176_118.json",
+      "voters": 1043,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_119.pdf",
+      "output": "json_2\\S01_176_119.json",
+      "voters": 1121,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_120.pdf",
+      "output": "json_2\\S01_176_120.json",
+      "voters": 1135,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_121.pdf",
+      "output": "json_2\\S01_176_121.json",
+      "voters": 823,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_122.pdf",
+      "output": "json_2\\S01_176_122.json",
+      "voters": 875,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_123.pdf",
+      "output": "json_2\\S01_176_123.json",
+      "voters": 1039,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_124.pdf",
+      "output": "json_2\\S01_176_124.json",
+      "voters": 1015,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_125.pdf",
+      "output": "json_2\\S01_176_125.json",
+      "voters": 595,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_126.pdf",
+      "output": "json_2\\S01_176_126.json",
+      "voters": 508,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_127.pdf",
+      "output": "json_2\\S01_176_127.json",
+      "voters": 645,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_128.pdf",
+      "output": "json_2\\S01_176_128.json",
+      "voters": 468,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_129.pdf",
+      "output": "json_2\\S01_176_129.json",
+      "voters": 749,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_130.pdf",
+      "output": "json_2\\S01_176_130.json",
+      "voters": 899,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_131.pdf",
+      "output": "json_2\\S01_176_131.json",
+      "voters": 739,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_132.pdf",
+      "output": "json_2\\S01_176_132.json",
+      "voters": 1048,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_133.pdf",
+      "output": "json_2\\S01_176_133.json",
+      "voters": 1108,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_134.pdf",
+      "output": "json_2\\S01_176_134.json",
+      "voters": 727,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_135.pdf",
+      "output": "json_2\\S01_176_135.json",
+      "voters": 529,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_136.pdf",
+      "output": "json_2\\S01_176_136.json",
+      "voters": 706,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_137.pdf",
+      "output": "json_2\\S01_176_137.json",
+      "voters": 581,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_138.pdf",
+      "output": "json_2\\S01_176_138.json",
+      "voters": 613,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_140.pdf",
+      "output": "json_2\\S01_176_140.json",
+      "voters": 1173,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_141.pdf",
+      "output": "json_2\\S01_176_141.json",
+      "voters": 1055,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_142.pdf",
+      "output": "json_2\\S01_176_142.json",
+      "voters": 848,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_143.pdf",
+      "output": "json_2\\S01_176_143.json",
+      "voters": 1053,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_144.pdf",
+      "output": "json_2\\S01_176_144.json",
+      "voters": 1084,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_145.pdf",
+      "output": "json_2\\S01_176_145.json",
+      "voters": 1289,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_146.pdf",
+      "output": "json_2\\S01_176_146.json",
+      "voters": 1226,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_147.pdf",
+      "output": "json_2\\S01_176_147.json",
+      "voters": 806,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_148.pdf",
+      "output": "json_2\\S01_176_148.json",
+      "voters": 974,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_150.pdf",
+      "output": "json_2\\S01_176_150.json",
+      "voters": 837,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_151.pdf",
+      "output": "json_2\\S01_176_151.json",
+      "voters": 592,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_152.pdf",
+      "output": "json_2\\S01_176_152.json",
+      "voters": 807,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_153.pdf",
+      "output": "json_2\\S01_176_153.json",
+      "voters": 810,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_154.pdf",
+      "output": "json_2\\S01_176_154.json",
+      "voters": 606,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_155.pdf",
+      "output": "json_2\\S01_176_155.json",
+      "voters": 596,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_156.pdf",
+      "output": "json_2\\S01_176_156.json",
+      "voters": 1252,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_157.pdf",
+      "output": "json_2\\S01_176_157.json",
+      "voters": 1083,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_158.pdf",
+      "output": "json_2\\S01_176_158.json",
+      "voters": 853,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_159.pdf",
+      "output": "json_2\\S01_176_159.json",
+      "voters": 890,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_160.pdf",
+      "output": "json_2\\S01_176_160.json",
+      "voters": 818,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_161.pdf",
+      "output": "json_2\\S01_176_161.json",
+      "voters": 615,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_162.pdf",
+      "output": "json_2\\S01_176_162.json",
+      "voters": 844,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_163.pdf",
+      "output": "json_2\\S01_176_163.json",
+      "voters": 886,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_164.pdf",
+      "output": "json_2\\S01_176_164.json",
+      "voters": 904,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_165.pdf",
+      "output": "json_2\\S01_176_165.json",
+      "voters": 918,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_166.pdf",
+      "output": "json_2\\S01_176_166.json",
+      "voters": 938,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_167.pdf",
+      "output": "json_2\\S01_176_167.json",
+      "voters": 1014,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_168.pdf",
+      "output": "json_2\\S01_176_168.json",
+      "voters": 908,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_169.pdf",
+      "output": "json_2\\S01_176_169.json",
+      "voters": 858,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_170.pdf",
+      "output": "json_2\\S01_176_170.json",
+      "voters": 1109,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_171.pdf",
+      "output": "json_2\\S01_176_171.json",
+      "voters": 983,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_172.pdf",
+      "output": "json_2\\S01_176_172.json",
+      "voters": 634,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_173.pdf",
+      "output": "json_2\\S01_176_173.json",
+      "voters": 578,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_174.pdf",
+      "output": "json_2\\S01_176_174.json",
+      "voters": 597,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_175.pdf",
+      "output": "json_2\\S01_176_175.json",
+      "voters": 627,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_176.pdf",
+      "output": "json_2\\S01_176_176.json",
+      "voters": 726,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_177.pdf",
+      "output": "json_2\\S01_176_177.json",
+      "voters": 712,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_178.pdf",
+      "output": "json_2\\S01_176_178.json",
+      "voters": 849,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_179.pdf",
+      "output": "json_2\\S01_176_179.json",
+      "voters": 827,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_180.pdf",
+      "output": "json_2\\S01_176_180.json",
+      "voters": 799,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_181.pdf",
+      "output": "json_2\\S01_176_181.json",
+      "voters": 870,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_182.pdf",
+      "output": "json_2\\S01_176_182.json",
+      "voters": 1157,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_183.pdf",
+      "output": "json_2\\S01_176_183.json",
+      "voters": 1125,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_184.pdf",
+      "output": "json_2\\S01_176_184.json",
+      "voters": 1045,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_185.pdf",
+      "output": "json_2\\S01_176_185.json",
+      "voters": 666,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_186.pdf",
+      "output": "json_2\\S01_176_186.json",
+      "voters": 959,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_187.pdf",
+      "output": "json_2\\S01_176_187.json",
+      "voters": 694,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_188.pdf",
+      "output": "json_2\\S01_176_188.json",
+      "voters": 897,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_189.pdf",
+      "output": "json_2\\S01_176_189.json",
+      "voters": 900,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_190.pdf",
+      "output": "json_2\\S01_176_190.json",
+      "voters": 689,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_191.pdf",
+      "output": "json_2\\S01_176_191.json",
+      "voters": 659,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_192.pdf",
+      "output": "json_2\\S01_176_192.json",
+      "voters": 1434,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_193.pdf",
+      "output": "json_2\\S01_176_193.json",
+      "voters": 603,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_194.pdf",
+      "output": "json_2\\S01_176_194.json",
+      "voters": 1468,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_195.pdf",
+      "output": "json_2\\S01_176_195.json",
+      "voters": 444,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_196.pdf",
+      "output": "json_2\\S01_176_196.json",
+      "voters": 1007,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_197.pdf",
+      "output": "json_2\\S01_176_197.json",
+      "voters": 903,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_198.pdf",
+      "output": "json_2\\S01_176_198.json",
+      "voters": 804,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_199.pdf",
+      "output": "json_2\\S01_176_199.json",
+      "voters": 937,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_200.pdf",
+      "output": "json_2\\S01_176_200.json",
+      "voters": 612,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_201.pdf",
+      "output": "json_2\\S01_176_201.json",
+      "voters": 981,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_202.pdf",
+      "output": "json_2\\S01_176_202.json",
+      "voters": 658,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_203.pdf",
+      "output": "json_2\\S01_176_203.json",
+      "voters": 1514,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_204.pdf",
+      "output": "json_2\\S01_176_204.json",
+      "voters": 655,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_205.pdf",
+      "output": "json_2\\S01_176_205.json",
+      "voters": 855,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_206.pdf",
+      "output": "json_2\\S01_176_206.json",
+      "voters": 1042,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_207.pdf",
+      "output": "json_2\\S01_176_207.json",
+      "voters": 547,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_208.pdf",
+      "output": "json_2\\S01_176_208.json",
+      "voters": 586,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_94.pdf",
+      "output": "json_2\\S01_176_94.json",
+      "voters": 858,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_95.pdf",
+      "output": "json_2\\S01_176_95.json",
+      "voters": 909,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_96.pdf",
+      "output": "json_2\\S01_176_96.json",
+      "voters": 934,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_97.pdf",
+      "output": "json_2\\S01_176_97.json",
+      "voters": 1105,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_98.pdf",
+      "output": "json_2\\S01_176_98.json",
+      "voters": 1390,
+      "status": "ok"
+    },
+    {
+      "file": "S01_176_99.pdf",
+      "output": "json_2\\S01_176_99.json",
+      "voters": 1398,
+      "status": "ok"
+    }
+  ]
+}
