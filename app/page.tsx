@@ -221,11 +221,11 @@ export default function Home() {
                     <div className="border-t border-gray-100 pt-2.5 grid grid-cols-2 gap-x-2 gap-y-1.5">
                       <div>
                         <p className="text-[9px] uppercase tracking-wider text-gray-400">Constituency</p>
-                        <p className="text-[11px] text-gray-600 font-medium">{voter.constituency_number || '—'}</p>
+                        <p className="text-[11px] text-gray-600 font-medium">{voter.constituency_no || '—'}</p>
                       </div>
                       <div>
                         <p className="text-[9px] uppercase tracking-wider text-gray-400">Part</p>
-                        <p className="text-[11px] text-gray-600 font-medium">{voter.part_number || '—'}</p>
+                        <p className="text-[11px] text-gray-600 font-medium">{voter.part_no || '—'}</p>
                       </div>
                       <div>
                         <p className="text-[9px] uppercase tracking-wider text-gray-400">Serial</p>
