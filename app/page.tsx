@@ -81,7 +81,7 @@ export default function Home() {
 
   const isFemale = (gender?: string) => {
     const g = (gender || '').trim().toLowerCase();
-    return g === 'స్త్రీ' || g === 'ఆడ' || g === 'female' || g === 'f' || g === 'ీ';
+    return g === 'స్త్రీ' || g === 'ఆడ' || g === 'female' || g === 'f' || g === 'ీ' || g === "సీిో";
   };
 
   return (
